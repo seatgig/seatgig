@@ -485,7 +485,6 @@ p {
 }
 
 .right-sidebar {
-  display: none;
   width: 33.34%;
   padding: 5px;
   float: left;
@@ -917,7 +916,6 @@ footer a:hover {
 
 /* Footer */
 #footer {
-  display: none;
   background-color: #fff;
 }
 
