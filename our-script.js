@@ -1,44 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Wait until tiny-slider.js is loaded
-    if (typeof tns !== "function") {
-        console.error("Tiny Slider not loaded!");
-        return;
+var slider = tns({
+    container: '.my-slider',
+    items: 4,  // Show 4 slides at a time
+    slideBy: 1, // Move 1 slide at a time
+    autoplay: false,
+    controls: false, // Hide default buttons
+    nav: false,
+    loop: true, // Enable infinite scrolling
+    responsive: {
+        1200: { items: 4 },
+        992: { items: 3 },
+        768: { items: 2 },
+        576: { items: 1 }
     }
-
-    // Ensure the slider container exists
-    const sliderContainer = document.querySelector('.my-slider');
-    if (!sliderContainer) {
-        console.error("Slider container '.my-slider' not found!");
-        return;
-    }
-
-    // Initialize tiny-slider
-    var slider = tns({
-        container: ".my-slider",
-        items: 4,
-        slideBy: 1,
-        autoplay: false,
-        controls: false,
-        nav: false,
-        loop: true,
-        responsive: {
-            1200: { items: 4 },
-            992: { items: 3 },
-            768: { items: 2 },
-            576: { items: 1 }
-        }
-    });
-
-    // Custom Buttons
-    document.getElementById("prev").addEventListener("click", function () {
-        slider.goTo("prev");
-    });
-
-    document.getElementById("next").addEventListener("click", function () {
-        slider.goTo("next");
-    });
 });
 
+// Custom Buttons
+document.getElementById('prev').addEventListener('click', function () {
+    slider.goTo('prev');
+});
+
+document.getElementById('next').addEventListener('click', function () {
+    slider.goTo('next');
+});
 
 // ================ auto slider 1
 function initSlider(sliderClass, prevBtn, nextBtn) {
