@@ -771,7 +771,6 @@ p {
 .slider-container {
   margin: 30px 0;
   position: relative;
-  overflow: hidden;
 }
 .slider .slide-item {
   text-align: center;
@@ -895,7 +894,7 @@ footer a:hover {
   text-decoration: underline;
 }
 .our-footer .footer-col {
-  width: inherit;
+  width: 300px;
   height: auto;
   display: table-cell;
   box-sizing: border-box;
@@ -1827,4 +1826,85 @@ footer a:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 374.98px) {
+  /* Styles for very small phones */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .sub-three-card {
+    padding: 20px;
+  }
+  .sub-three-card .col-md-4 {
+    margin: 10px 0;
+  }
+  .our-footer {
+    padding: 20px;
+  }
+  .our-footer .footer-col {
+    display: block;
+  }
+}
+
+/* Small devices (phones, 375px to 425px) */
+@media (min-width: 375px) and (max-width: 425px) {
+  /* Styles for phones */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .sub-three-card {
+    padding: 20px;
+  }
+  .sub-three-card .col-md-4 {
+    margin: 10px 0;
+  }
+  .our-footer {
+    padding: 20px;
+  }
+  .our-footer .footer-col {
+    display: block;
+  }
+}
+
+/* Medium devices (small tablets, 426px to 575px) */
+@media (min-width: 426px) and (max-width: 575.98px) {
+  /* Styles for small tablets */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .sub-three-card {
+    padding: 20px;
+  }
+  .sub-three-card .col-md-4 {
+    margin: 10px 0;
+  }
+  .our-footer {
+    padding: 20px;
+  }
+  .our-footer .footer-col {
+    display: block;
+  }
+}
+
+/* Large devices (tablets, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles for tablets */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .sub-three-card {
+    padding: 20px;
+  }
+  .sub-three-card .col-md-4 {
+    margin: 10px 0;
+  }
 }
