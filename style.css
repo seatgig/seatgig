@@ -894,6 +894,7 @@ footer a:hover {
   text-decoration: underline;
 }
 .our-footer .footer-col {
+  align-content: flex-start;
   width: 300px;
   height: auto;
   display: table-cell;
