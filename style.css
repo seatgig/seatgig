@@ -1022,11 +1022,14 @@ footer a:hover {
 
 #home-heading {
   font-size: 1.25rem;
+  margin: 0;
   color: #00ff96;
 }
 
 #social-heading {
+  font-size: 1.25rem;
   color: #00ff96;
+  margin: 0;
 }
 
 .footer-contents ul {
