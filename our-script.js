@@ -10,7 +10,10 @@ var slider = tns({
         1200: { items: 4 },
         992: { items: 3 },
         768: { items: 2 },
-        576: { items: 1 }
+        576: { items: 1 },
+        425: {items: 2},
+        375: {items: 2},
+        320: {items: 1}
     }
 });
 
