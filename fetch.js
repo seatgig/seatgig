@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Find the existing #events div
     let eventsContainer = document.getElementById("events");
-
     if (!eventsContainer) {
-        console.error("Error: #events container not found in the HTML.");
-        return; // Stop script if #events is missing
+        eventsContainer = document.createElement("div");
+        eventsContainer.id = "events";
+        document.body.appendChild(eventsContainer);
     }
 
     fetch("https://bloggyhands.online/fetch_data.php")
     .then(response => response.json())
     .then(data => {
-        console.log("Fetched Data:", data); // Debugging log
+        console.log("Fetched Data:", data);
 
         let output = "<h2>Upcoming Events</h2>";
         data.forEach(event => {
