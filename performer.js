@@ -16,14 +16,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (!performerDetailsDiv) {
                         performerDetailsDiv = document.createElement("div");
                         performerDetailsDiv.id = "performer-details";
-                        document.body.appendChild(performerDetailsDiv);
+                        performerDetailsDiv.style.color = "#fff";  // White text color
+                        performerDetailsDiv.style.padding = "20px";
+                        performerDetailsDiv.style.background = "rgba(0,0,0,0.8)"; // Optional background
+                        performerDetailsDiv.style.textAlign = "center";
+                        performerDetailsDiv.style.marginBottom = "20px";
+
+                        let footer = document.querySelector("footer");
+                        if (footer) {
+                            footer.parentNode.insertBefore(performerDetailsDiv, footer); // Insert above footer
+                        } else {
+                            document.body.appendChild(performerDetailsDiv); // Fallback: Append at bottom
+                        }
                     }
 
                     // Insert performer details
                     performerDetailsDiv.innerHTML = `
-                       <h2 style="color: #fff;">${data.pname}</h2>
-                        <p style="color: #fff;"><strong>ID:</strong> ${data.contid}</p>
-                        <p style="color: #fff;">${data.content}</p>
+                        <h2>${data.pname}</h2>
+                        <p><strong>ID:</strong> ${data.contid}</p>
+                        <p>${data.content}</p>
                     `;
                 } else {
                     console.log("Performer not found in IONOS database.");
