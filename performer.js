@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (!performerDetailsDiv) {
                         performerDetailsDiv = document.createElement("div");
                         performerDetailsDiv.id = "performer-details";
-                        performerDetailsDiv.style.color = "#fff";  // White text color
+                        performerDetailsDiv.style.color = "#ffd700";  // White text color
                         performerDetailsDiv.style.padding = "20px";
                         performerDetailsDiv.style.background = "rgba(0,0,0,0.8)"; // Optional background
                         performerDetailsDiv.style.textAlign = "center";
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Insert performer details
                     performerDetailsDiv.innerHTML = `
                         <h2>${data.pname}</h2>
-                        <p><strong>ID:</strong> ${data.contid}</p>
+                       
                         <p>${data.content}</p>
                     `;
                 } else {
