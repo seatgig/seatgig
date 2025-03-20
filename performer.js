@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Insert performer details
                     performerDetailsDiv.innerHTML = `
-                        <h2>${data.pname}</h2>
-                        <p><strong>ID:</strong> ${data.contid}</p>
-                        <p>${data.content}</p>
+                       <h2 style="color: #fff;">${data.pname}</h2>
+                        <p style="color: #fff;"><strong>ID:</strong> ${data.contid}</p>
+                        <p style="color: #fff;">${data.content}</p>
                     `;
                 } else {
                     console.log("Performer not found in IONOS database.");
