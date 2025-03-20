@@ -1,41 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let path = window.location.pathname;
+    let performerIdElement = document.getElementById("performerIds");
 
-    // Check if user is on a performer page
-    if (path.startsWith("/performers/")) {
-        let performerSlug = path.split("/").pop(); // Extract "jack-black"
+    if (performerIdElement) {
+        let performerId = performerIdElement.value; // Get performer ID from SeatGig
 
-        setTimeout(() => {
-            let performerIdElement = document.querySelector("[data-performer-id]"); 
-            if (performerIdElement) {
-                let performerId = performerIdElement.getAttribute("data-performer-id"); // SeatGig ID
-                
-                // Fetch performer details from IONOS database
-                fetch(`https://bloggyhands.online/fetch_performer.php?contid=${performerId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (!data.error) {
-                            let performerDetailsDiv = document.getElementById("performer-details");
+        console.log("Detected Performer ID:", performerId); // Debugging log
 
-                            if (!performerDetailsDiv) {
-                                performerDetailsDiv = document.createElement("div");
-                                performerDetailsDiv.id = "performer-details";
-                                document.body.appendChild(performerDetailsDiv);
-                            }
+        // Fetch performer details from IONOS database
+        fetch(`https://bloggyhands.online/fetch_performer.php?contid=${performerId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.error) {
+                    let performerDetailsDiv = document.getElementById("performer-details");
 
-                            performerDetailsDiv.innerHTML = `
-                                <h2>${data.pname}</h2>
-                                <p><strong>ID:</strong> ${data.contid}</p>
-                                <p>${data.content}</p>
-                            `;
-                        } else {
-                            console.log("Performer not found.");
-                        }
-                    })
-                    .catch(error => console.error("Error fetching performer details:", error));
-            } else {
-                console.log("No performer ID found on page.");
-            }
-        }, 2000); // Wait for SeatGig page to fully load
+                    if (!performerDetailsDiv) {
+                        performerDetailsDiv = document.createElement("div");
+                        performerDetailsDiv.id = "performer-details";
+                        document.body.appendChild(performerDetailsDiv);
+                    }
+
+                    // Insert performer details
+                    performerDetailsDiv.innerHTML = `
+                        <h2>${data.pname}</h2>
+                        <p><strong>ID:</strong> ${data.contid}</p>
+                        <p>${data.content}</p>
+                    `;
+                } else {
+                    console.log("Performer not found in IONOS database.");
+                }
+            })
+            .catch(error => console.error("Error fetching performer details:", error));
+    } else {
+        console.log("No performer ID found on page.");
     }
 });
