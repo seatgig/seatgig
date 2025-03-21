@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.seatgig.com/events-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.seatgig.com/child-category-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.seatgig.com/cities-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.seatgig.com/parent-category-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.seatgig.com/performers-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.seatgig.com/venues-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.seatgig.com/grand-child-category-sitemap.xml</loc>
+    <lastmod>2025-03-06T06:55:10+00:00</lastmod>
+  </sitemap>
+</sitemapindex>
